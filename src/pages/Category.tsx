@@ -15,7 +15,7 @@ import LoadedCartSlided from "../component/category/LoadedCartSlider";
 import LoadedProducts from "../component/category/LoadedProducts";
 import Pagination from "../component/category/Pagination";
 import { isLoadedApi, notLoadedApi } from "../redux/slice/searchApiIsLoaded";
-import Brands from "../component/category/Brands";
+// import Brands from "../component/category/Brands";
 import { useGetBrands } from "../api/getAPIs/useGitBrandsByCategory";
 
 const Category = () => {
@@ -155,7 +155,7 @@ const Category = () => {
       {loading && (
         <div className="mt-5 sm:mt-10 hidden md:grid grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-5 lg:gap-8 xl:gap-10">
           {arr.map((data: any, index: number) => (
-            <LoadedProducts key={index} />
+            <LoadedProducts key={data?.id || index}   />
           ))}
         </div>
       )}

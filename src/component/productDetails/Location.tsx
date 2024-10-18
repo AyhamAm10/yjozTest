@@ -5,11 +5,6 @@ import { useSelector } from 'react-redux';
 
 const Location:React.FC = () => {
 
-    // البيانات من الـ API
-    const locationData = {
-      latitude: "25.261013334768514",
-      longitude: "55.371160469949245",
-    };
 
     const product = useSelector(
       (state: any) => state.productDetailsSlice

@@ -20,7 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setUserProfile } from "../../redux/slice/userProfileSlice";
 
 const Main = () => {
-  const [cookie, setCookie] = useCookies(["token"]);
+  const [cookie] = useCookies(["token"]);
   const dispatch = useDispatch();
   const userData:UserProfile = useSelector((state: any) => state.userProfileSlice);
   const fetchProfile: () => Promise<UserProfile> = async () => {
@@ -38,7 +38,7 @@ const Main = () => {
     }
   };
 
-  const { data, isLoading } = useQuery<
+  const { data } = useQuery<
     unknown,
     Error,
     { data: UserProfile },

@@ -1,4 +1,3 @@
-import React from 'react'
 import img1 from "../../../assets/profilePage/program/icon1.svg"
 import img2 from "../../../assets/home/proceed.svg"
 import img3 from "../../../assets/home/negotiate.svg"

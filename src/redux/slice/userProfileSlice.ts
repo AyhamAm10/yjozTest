@@ -45,7 +45,7 @@ const userProfileSlice = createSlice({
     setUserProfile(state, action: PayloadAction<UserProfile>) {
       return { ...state, ...action.payload };
     },
-    resetUserProfile(state) {
+    resetUserProfile() {
       return initialState;
     }
   }

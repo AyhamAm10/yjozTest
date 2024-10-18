@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { axiosClaint, endPoints, LongStaleTime } from '../../api/API__information_conect';
 import { QueryKey, useQuery } from '@tanstack/react-query';
 import Select from '../category/Select';
@@ -27,7 +27,7 @@ const TagSelected = () => {
       return data;
     };
   
-    const { data, isLoading } = useQuery<
+    const { data } = useQuery<
       unknown,
       Error,
       { data: { data: any[] } },

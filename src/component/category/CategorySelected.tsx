@@ -20,7 +20,7 @@ type props ={
   setSelectedValueId: React.Dispatch<React.SetStateAction<any | null>>
 }
 
-const CategorySelected:React.FC<props> = ({setSubCategory , selectedValueId , setSelectedValueId }) => {
+const CategorySelected:React.FC<props> = ({setSubCategory  , setSelectedValueId }) => {
   const [selectedValue, setSelectedValue] = useState<string | null>(null);
   const [cleanData, setCleanData] = useState<string[]>([]); 
   
@@ -30,7 +30,7 @@ const CategorySelected:React.FC<props> = ({setSubCategory , selectedValueId , se
 
   const dispatch = useDispatch();
 
-  const { data, isLoading } = useQuery<
+  const { data } = useQuery<
     unknown,
     Error,
     resData,

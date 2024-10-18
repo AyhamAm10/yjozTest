@@ -1,4 +1,3 @@
-import React from 'react'
 import map from "../../../assets/profilePage/newItem/Rectangle 34 (1).png"
 const AddressCart = () => {
   return (

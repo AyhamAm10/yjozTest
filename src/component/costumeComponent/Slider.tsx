@@ -19,10 +19,11 @@ type sliderProps = {
 const Slider:React.FC<sliderProps> = ({data , Component , bg , subCategory}) => {
 
   const screenSize = useScreenSize()
+  console.log(data)
   return (
     <>
       {
-        data &&
+        data.length > 0 &&
       <div className={`w-full my-10 bg-[${bg}] `}>
          <div className='flex-center'>
          <button className="px-8 py-4 rounded-[0.5rem] text-red cursor-pointer bg-[#FFC21B1A] text-sm font-medium ">

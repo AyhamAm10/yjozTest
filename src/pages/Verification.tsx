@@ -8,7 +8,7 @@ import Loader from "../component/layout/Loader";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 const Verification: React.FC = () => {
-  const [cookies, setCookie] = useCookies(["token"]);
+  const [cookies , setCookie] = useCookies(["token"]);
   const [timer, setTimer] = useState(60); 
   const [code, setCode] = useState(["", "", "", ""]); 
   const [loading , setLoading] = useState<boolean>(false)
@@ -17,7 +17,7 @@ const Verification: React.FC = () => {
 
   useEffect(()=>{
 
-    console.log(verifyBodyReq)
+    console.log(cookies)
   },[verifyBodyReq])
 
   useEffect(() => {

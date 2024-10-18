@@ -1,10 +1,10 @@
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import CostumBtn from "../../costumeComponent/CostumBtn";
-import { UserProfile } from "../../../type/reduxType";
+// import { UserProfile } from "../../../type/reduxType";
 
 const Subscriptions = () => {
 
-  const userData:UserProfile = useSelector((state: any) => state.userProfileSlice);
+  // const userData:UserProfile = useSelector((state: any) => state.userProfileSlice);
   
   return (
     <div className=" py-2 sm:py-4">

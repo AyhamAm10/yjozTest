@@ -1,4 +1,4 @@
-import React from "react";
+
 import Hero from "../../component/ProfilePages/program/Hero";
 import Level from "../../component/ProfilePages/program/Level";
 

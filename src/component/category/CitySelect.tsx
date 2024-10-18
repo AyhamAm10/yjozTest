@@ -25,7 +25,7 @@ const CitySelect = () => {
     return data;
   };
 
-  const { data, isLoading } = useQuery<
+  const { data } = useQuery<
     unknown,
     Error,
     { data: { data: any[] } },

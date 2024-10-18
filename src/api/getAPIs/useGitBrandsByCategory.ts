@@ -1,6 +1,6 @@
 
 import { AxiosResponse } from "axios"
-import { ApiUrl, ApiUrlDev, axiosClaint, endPoints } from "../API__information_conect"
+import { ApiUrlDev, axiosClaint, endPoints } from "../API__information_conect"
 
 
 export const useGetBrands:(id: string) => Promise<AxiosResponse<any, any> | undefined> = async(id:string)=>{

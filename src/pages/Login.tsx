@@ -14,10 +14,10 @@ import { bodyReqVerify } from "../redux/slice/verifyCode";
 import { useDispatch } from "react-redux";
 import Loader from "../component/layout/Loader"
 
-type loginData = {
-  email: string,
-  phoneNumber: string
-}
+// type loginData = {
+//   email: string,
+//   phoneNumber: string
+// }
 
 
 const Login: React.FC = () => {
