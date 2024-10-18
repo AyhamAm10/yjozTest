@@ -1,6 +1,6 @@
 import React from 'react'
 import 'leaflet/dist/leaflet.css';
-import MapComponent from './MapContainer';
+// import MapComponent from './MapContainer';
 import { useSelector } from 'react-redux';
 
 const Location:React.FC = () => {
@@ -15,7 +15,7 @@ const Location:React.FC = () => {
   return (
     <div >
       <div>
-      <MapComponent  latitude={product.address.latitude} longitude={product.address.longitude} address={product.address.address} />
+      {/* <MapComponent  latitude={product.address.latitude} longitude={product.address.longitude} address={product.address.address} /> */}
     </div>
     </div>
   )
