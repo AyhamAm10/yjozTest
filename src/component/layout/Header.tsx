@@ -94,7 +94,7 @@ const Header = () => {
         variants={menuVariants}
         className="overflow-hidden"
       >
-        <MobileList />
+        <MobileList  setMenuOpen={setMenuOpen}/>
       </motion.div>
     </header>
   );

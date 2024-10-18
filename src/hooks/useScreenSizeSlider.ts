@@ -10,9 +10,9 @@ function useScreenSize() {
     } else if (width >= 640 && width < 768) {
       return 2;
     } else if (width >= 768 && width < 1280) {
-      return 4;
+      return 3;
     } else if (width >= 1280 && width < 1636) {
-      return 5;
+      return 4;
     } else {
       return 5;
     }
