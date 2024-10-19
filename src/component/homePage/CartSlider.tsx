@@ -7,11 +7,11 @@ import ice from "../../assets/home/ice.svg"
 import door from "../../assets/home/doors.svg"
 import { productCart } from "../../content/statckValue";
 import arrowRight from "../../assets/home/arrow-right.svg"
-
+import { Link } from "react-router-dom";
 
 const CartSlider: React.FC<any> = ({ data }) => {
   return(
-    <div className="bg-white shadow-lg rounded-lg p-5 hover:scale-110 duration-300 transition-all ">
+    <div className="bg-white shadow-lg rounded-lg p-5 hover:scale-110 hover:border-yalwe hover:border duration-300 transition-all ">
       {/* Image */}
       <div className="relative">
         <img
@@ -88,10 +88,12 @@ const CartSlider: React.FC<any> = ({ data }) => {
         </div>
 
         {/* View Details Button */}
+        <Link to={`/product/${data.id}`}>
         <button className="mt-3 w-full py-2  border border-yalwe text-dark  rounded-lg text-lg flex items-center justify-center">
           View Details
           <img src={arrowRight} alt="arrowRight" />
         </button>
+        </Link>
       </div>
     </div>
   );

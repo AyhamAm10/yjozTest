@@ -4,7 +4,7 @@ import { blogsList } from '../../content'
 import CostumBtn from '../costumeComponent/CostumBtn'
 export const BlogHome:React.FC = () => {
   return (
-    <div className={`w-full my-10 px-5 sm:px-9 lg:px-20 `}>
+    <div className={`w-full lg:my-10 px-5 sm:px-9 lg:px-20 `}>
     <div className='flex-center'>
     <button className="px-8 py-4 rounded-[0.5rem] text-red cursor-pointer bg-[#FFC21B1A] text-sm font-medium ">
     Blog
@@ -37,6 +37,6 @@ export const BlogHome:React.FC = () => {
     <div className='flex-center py-10'>
     <CostumBtn value='Show All'/>
     </div>
- </div>
+    </div>
   )
 }

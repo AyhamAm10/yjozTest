@@ -68,7 +68,7 @@ const Slider:React.FC<sliderProps> = ({data , Component , bg , subCategory}) => 
           }
         </div>
         <div className='flex-center py-10'>
-          <CostumBtn value='Show All' />
+          <CostumBtn value='Show All' style='w-full md:w-auto ' />
         </div>
       </div>
       }

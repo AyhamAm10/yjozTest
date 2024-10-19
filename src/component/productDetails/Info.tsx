@@ -29,7 +29,7 @@ const Info: React.FC = () => {
         setPages(newPage)
   }
   return (
-    <div className="w-full px-2 sm:px-5 md:px-10 lg:px-14 py-5 ">
+    <div className="w-full px-2 sm:px-5 md:px-10 lg:px-14 py-5 xl:max-w-[55rem] md:max-w-[50rem]  ">
       <ul className="w-full flex items-center justify-between">
         {
             page.map((item)=>(

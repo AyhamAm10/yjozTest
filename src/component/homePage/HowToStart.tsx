@@ -36,13 +36,13 @@ const HowToStart:React.FC = () => {
     <section className='bg-gradient-to-r from-red to-yalwe rounded-md my-10 py-4 sm:py-9 md:py-12 lg:py-20 px-2 sm:px-4 flex flex-col items-center '>
         <h1 className='text-white text-xl font-semibold pb-3 sm:pb-5'>How to Start</h1>
         <p className='text-[#333] sm:text-4xl lg:text-[2.8rem] font-semibold'>Easy Process</p>
-        <div className='mt-10 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-around'>
+        <div className='mt-10 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-8 ustify-around items-center'>
             {
                 iconList.map((item:iconListType)=>(
-                    <div key={item.number} className='flex flex-col items-center'>
-                        <img src={item.icon} alt={item.title} />
-                        <div className='text-white text-3xl mt-2'>
-                            <span className='text-4xl font-semibold text-white'>{item.number}</span>
+                    <div key={item.number} className='flex flex-col  items-center'>
+                        <img src={item.icon} alt={item.title} className='w-24 md:w-auto' />
+                        <div className='text-white text-lg md:text-xl  lg:text-3xl mt-2 flex gap-5'>
+                            <span className=' lg:text-4xl font-semibold text-white'>{item.number}</span>
                             {item.title}
                         </div>
                     </div>

@@ -13,9 +13,9 @@ const MobileList:React.FC<props> = ({setMenuOpen}) => {
             <ul className="flex items-center gap-3 flex-col ">
                 {
                   mobileLink.map((link:any)=>(
-                    <li key={link.id} onClick={()=>setMenuOpen((priv)=>!priv)} >
+                    <li className="p-2" key={link.id} onClick={()=>setMenuOpen((priv)=>!priv)} >
                         <Link to={link.link}>
-                            <img src={link.icon} alt="" />
+                            <img src={link.icon} alt="link" />
                         </Link>
                     </li>
                   ))  

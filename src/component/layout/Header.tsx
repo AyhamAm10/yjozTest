@@ -39,7 +39,7 @@ const Header = () => {
           <img src={logo} alt="yjoz logo" className="h-5 lg:h-8 2xl:h-14 " />
         </Link>
 
-        <ul className="hidden md:flex gap-4 sm:gap-6 lg:gap-8 ">
+        <ul className="hidden lg:flex gap-4 sm:gap-6 lg:gap-8 ">
           {ListItem.map((item: headerType) => (
             <Link key={item.id} to={item._id}>
               <li
@@ -53,7 +53,7 @@ const Header = () => {
           ))}
         </ul>
 
-        <div className="hidden md:flex items-center gap-2 2xl:gap-3">
+        <div className="hidden lg:flex items-center gap-2 2xl:gap-3">
           <button>
             <img
               src={search}
@@ -82,7 +82,7 @@ const Header = () => {
           </button>
         </div>
 
-        <div className="md:hidden" onClick={() => setMenuOpen(!isMenuOpen)}>
+        <div className="lg:hidden" onClick={() => setMenuOpen(!isMenuOpen)}>
           <img src={menu} alt="menu" className="cursor-pointer" />
         </div>
       </div>

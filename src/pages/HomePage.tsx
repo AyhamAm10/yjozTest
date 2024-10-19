@@ -14,11 +14,13 @@ const HomePage:React.FC = () => {
     <div className='min-h-screen'>
       <HeroSection />
       <HowToStart />
+      <div className='max-w-[100rem] mx-auto'>
       <Categorys />
       <CarSLider />
       <PeopleSayAbuoyUs />
       <BlogHome />
       <Partners />
+      </div>
     </div>
   )
 }
