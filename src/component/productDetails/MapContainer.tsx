@@ -1,31 +1,35 @@
-import React from "react";
-// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import React from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { LatLngExpression } from 'leaflet'; 
+import 'leaflet/dist/leaflet.css';
 
 
-// interface MapComponentProps {
-//   latitude: string;  
-//   longitude: string;
-//   address: string
-// }
-// { latitude, longitude  , address , } this is props
-const MapComponent: React.FC = () => {
-  // const position: [number, number] = [parseFloat(latitude), parseFloat(longitude)];
+type Props = {
+  latitude: string;
+  longitude: string;
+  address: string;
+};
+
+const MapComponent: React.FC<Props> = ({ latitude, longitude, address }) => {
+  const lat = parseFloat(latitude);
+  const lng = parseFloat(longitude);
+
+  if (isNaN(lat) || isNaN(lng)) {
+    return <div>Invalid coordinates</div>;
+  }
+
+  const position: LatLngExpression = [lat, lng]; 
 
   return (
-    // <MapContainer  center={position} zoom={15} style={{ height: "400px", width: "100%" }}>
-    //   <TileLayer
-    //     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    //     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    //   />
-    //   <Marker position={position}>
-    //     <Popup>
-    //       <b>{address}</b>
-    //     </Popup>
-    //   </Marker>
-    // </MapContainer>
-    <div>
-
-    </div>
+    <MapContainer center={position} zoom={13} style={{ height: '500px', width: '100%' }}>
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      />
+      <Marker position={position}>
+        <Popup>{address}</Popup>
+      </Marker>
+    </MapContainer>
   );
 };
 
