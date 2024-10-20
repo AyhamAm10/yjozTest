@@ -13,12 +13,7 @@ import { axiosClaint, endPoints } from "../api/API__information_conect";
 import { bodyReqVerify } from "../redux/slice/verifyCode";
 import { useDispatch } from "react-redux";
 import Loader from "../component/layout/Loader"
-
-// type loginData = {
-//   email: string,
-//   phoneNumber: string
-// }
-
+import { useTranslation } from 'react-i18next';
 
 const Login: React.FC = () => {
   const [state, setState] = useState({
@@ -28,7 +23,7 @@ const Login: React.FC = () => {
   const [loading , setLoading] = useState<boolean>(false)
   const dispatch = useDispatch()
   const navigate = useNavigate()
-
+  const { t  } = useTranslation();
   const formik = useFormik({
     initialValues: {
       input: "",
@@ -104,12 +99,12 @@ const Login: React.FC = () => {
           <div className="w-full sm:w-auto px-4">
             <div className="w-full flex-center gap-4 sm:mb-8">
               <h2 className="h-fit text-2xl lg:text-4xl xl:text-5xl font-medium text-center text-dark">
-                Welcome Back
+              {t('WelcomeBack')}
               </h2>
               <img src={emoji} alt="hand emoji" className="h-fit" />
             </div>
             <p className="mb-8 text-center text-[#A9A8A8] text-sm md:text-xl xl:text-2xl">
-              Please enter your email or phone to log in.
+              {t("enterEmailOrPhone")}
             </p>
 
             {
@@ -128,7 +123,7 @@ const Login: React.FC = () => {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.input}
-                  placeholder="Email or phone"
+                  placeholder={t("EmailPhone")}
                   className={`w-full text-sm sm:text-lg px-10 py-4 border placeholder:text-[#A9A8A8] ${
                     formik.touched.input && formik.errors.input
                       ? "border-red"
@@ -144,13 +139,13 @@ const Login: React.FC = () => {
                 type="submit"
                 className="w-full bg-yalwe text-white p-3 rounded-lg"
               >
-                Log in
+                {t("login")}
               </button>
 
               <div className="mt-8 flex items-center justify-between">
                 <hr className="w-full border-t border-[#A9A8A8]" />
                 <span className="px-3 text-[#A9A8A8] text-xs w-full">
-                  OR Continue With
+                  {t("continueWIth")}
                 </span>
                 <hr className="w-full border-t border-[#A9A8A8]" />
               </div>
@@ -162,15 +157,13 @@ const Login: React.FC = () => {
               </div>
 
               <p className="mt-4 text-center text-[#A9A8A8]">
-                Don’t have an account?{" "}
+                {t("DontHaveAccount")}
                 <Link to={"/register"}>
-                  <span className="text-yalwe">Sign Up</span>
+                  <span className="text-yalwe">{t("Sign Up")}</span>
                 </Link>
               </p>
             </form> : <Loader />
-
             }
-
             <div className="flex-center">
               <img
                 src={logo2}

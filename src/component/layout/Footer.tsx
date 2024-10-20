@@ -53,11 +53,11 @@ const Footer: React.FC = () => {
                         },
                         {
                             title : "Privacy Policy",
-                            link: "/"
+                            link: "/PrivacyPolicy"
                         },
                         {
                             title : "Terms and Conditions",
-                            link: "/"
+                            link: "/Conditions"
                         }
                     ].map((item)=>(
                         <Link to={item.link}>

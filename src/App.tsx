@@ -15,6 +15,8 @@ import Register from "./pages/Register";
 import Verification from "./pages/Verification";
 import ProfileCompany from "./pages/ProfileCompany";
 import ProfilePages from "./pages/ProfilePages";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Conditions from "./pages/Conditions";
 
 const App: React.FC = () => {
 
@@ -38,6 +40,8 @@ const App: React.FC = () => {
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/company/:id" element={<ProfileCompany />} />
             <Route path="/FAQs" element={<FAQs />} />
+            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+            <Route path="/Conditions" element={<Conditions />} />
             <Route path="/profile/*" element={<ProfilePages />} />
             <Route path="/login" element={<Login />} /> 
             <Route path="/register" element={<Register />} /> 
